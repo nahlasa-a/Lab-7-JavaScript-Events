@@ -7,8 +7,26 @@
 </head>
 <body>
     <h1>Welcome to JavaScript Events!</h1>
-    <p>Basic Content.</p>
-    <button id="hoverButton">Hover!</button>
-    <p id="message">Hover over the button/leave to see a message.</p>
+    <section class="event-section">
+        <h2>Mouse</h2>
+        <button id="hover-button">Hover Over!</button>
+        <p id="hover-message">Hover over button to see message.</p>
+    </section>
+
+    <section> class="event-section">
+        <h2>Keyboard</h2>
+        <input type="text" id="keyboard-input" placeholder="Type something...">
+        <p id="key-message">Type in the input box to see message.</p>
+    </section>
+
+    <section class="event-section">
+        <h2>Form</h2>
+        <form id="form-example">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-message">Submit the form to see message.</p>
+    </section> 
 </body>
 </html>
