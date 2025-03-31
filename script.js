@@ -50,3 +50,23 @@ demoForm.addEventListener('submit', (event) => {
         formMessage.textContent = '';
     }, 2000);
 });
+
+const focusInput = document.getElementById('focus-input'); 
+const focusMessage = document.getElementById('focus-message');  
+
+focusInput.addEventListener('focus', () => { 
+    focusMessage.textContent = 'Ready to type...'; 
+    focusMessage.style.backgroundColor = '#e8f4fc'; 
+    focusInput.style.borderColor = '#3498db'; 
+}); 
+
+focusInput.addEventListener('blur', () => { 
+    const inputValue = focusInput.value.trim(); 
+    if (inputValue) { 
+        focusMessage.textContent = `Input field lost focus with text: "${inputValue}"`; 
+    } else { 
+        focusMessage.textContent = 'No text entered...'; 
+    } 
+    focusMessage.style.backgroundColor = '#f5f5f5'; 
+    focusInput.style.borderColor = '#ddd'; 
+}); 
