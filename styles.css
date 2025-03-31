@@ -13,3 +13,15 @@
     font-weight: bold;
     min-height: 50px;
 }
+
+#button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#focus-input:focus{
+    outline: none;
+    border: 2px solid blue;
+}
