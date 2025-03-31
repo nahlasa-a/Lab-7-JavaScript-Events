@@ -90,3 +90,12 @@ buttonContainer.addEventListener('click', (event) => {
         }, 1000); 
     } 
 }); 
+
+const buttonData = ['Button 1', 'Button 2', 'Button 3']; 
+
+buttonData.forEach(text => { 
+    const newButton = document.createElement('button'); 
+    newButton.className = 'delegated-btn'; 
+    newButton.textContent = text; 
+    buttonContainer.appendChild(newButton); 
+}); 
