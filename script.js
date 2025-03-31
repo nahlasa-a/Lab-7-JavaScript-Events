@@ -70,3 +70,23 @@ focusInput.addEventListener('blur', () => {
     focusMessage.style.backgroundColor = '#f5f5f5'; 
     focusInput.style.borderColor = '#ddd'; 
 }); 
+
+const buttonContainer = document.getElementById('button-container'); 
+const delegationMessage = document.getElementById('delegation-message'); 
+
+buttonContainer.addEventListener('click', (event) => { 
+    if (event.target.tagName === 'BUTTON') { 
+
+        const buttonText = event.target.textContent;
+
+        delegationMessage.textContent = `Clicked: ${buttonText}`; 
+        delegationMessage.style.backgroundColor = '#e8f4fc'; 
+
+        event.target.style.backgroundColor = '#darkorange'; 
+
+        setTimeout(() => { 
+            event.target.style.backgroundColor = '#darkred'; 
+            delegationMessage.style.backgroundColor = '#lightred'; 
+        }, 1000); 
+    } 
+}); 
