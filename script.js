@@ -28,3 +28,25 @@ keyboardInput.addEventListener('keyup', (event) => {
     }
     , 2000);
 });
+
+const demoForm = document.getElementById('demo-form');
+const formMessage = document.getElementById('form-message');
+
+demoForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formInput = document.getElementById('form-input');
+    const inputValue = formInput.value.trim();
+    if (inputValue) {
+        formMessage.textContent = `Form submitted.: ${inputValue}`;
+        formMessage.style.color = 'green';
+    } else {
+        formMessage.textContent = 'Please enter a name before submitting.';
+        formMessage.style.color = 'red';
+    }
+
+    formInput.value = '';
+    setTimeout(() => {
+        formMessage.textContent = '';
+    }, 2000);
+});
