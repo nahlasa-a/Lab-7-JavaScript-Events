@@ -23,5 +23,5 @@
 
 #focus-input:focus{
     outline: none;
-    border: 2px solid blue;
+    border: 2px solid rgb(0, 0, 14);
 }
